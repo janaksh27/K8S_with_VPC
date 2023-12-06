@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: trypod2
+spec:
+  serviceAccountName: my-service-account
+  containers:
+  - name: trypodcontainer
+    image: gcr.io/google.com/cloudsdktool/google-cloud-cli:latest
+    command: ["sh", "-c","tail -f /dev/null"]
+    
+  restartPolicy: Always
